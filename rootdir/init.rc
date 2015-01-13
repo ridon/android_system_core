@@ -9,9 +9,7 @@ import /init.usb.rc
 import /init.${ro.hardware}.rc
 import /init.${ro.zygote}.rc
 import /init.trace.rc
-# Include CM's extra init file
-import /init.cm.rc
-
+import /init.ridon.rc
 
 on early-init
     # Set init and its forked children's oom_adj.
@@ -606,7 +604,7 @@ service installd /system/bin/installd
     class main
     socket installd stream 600 system system
 
-service flash_recovery /system/etc/install-cm-recovery.sh
+service flash_recovery /system/etc/install-ridon-recovery.sh
     class main
     seclabel u:r:install_recovery:s0
     oneshot
