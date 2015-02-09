@@ -61,6 +61,9 @@ extern int ifc_configure(const char *ifname, in_addr_t address,
 
 extern in_addr_t prefixLengthToIpv4Netmask(int prefix_length);
 
+extern int ifc_set_throttle(const char *ifname, int rxKbps, int txKbps); 
+
+
 __END_DECLS
 
 #endif /* _NETUTILS_IFC_H_ */
