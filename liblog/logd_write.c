@@ -541,7 +541,7 @@ int __xlog_buf_printf(int bufid, const struct xlog_record *rec, ...)
     va_list ap;
     char buf[LOG_BUF_SIZE];
 
-    va_start(ap, rec->fmt_str);
+    va_start(ap, rec);
     vsnprintf(buf, LOG_BUF_SIZE, rec->fmt_str, ap);
     va_end(ap);
 
