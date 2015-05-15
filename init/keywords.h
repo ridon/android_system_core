@@ -43,6 +43,8 @@ int do_loglevel(int nargs, char **args);
 int do_load_persist_props(int nargs, char **args);
 int do_load_all_props(int nargs, char **args);
 int do_wait(int nargs, char **args);
+int do_mknod(int nargs, char **args);
+
 #define __MAKE_KEYWORD_ENUM__
 #define KEYWORD(symbol, flags, nargs, func) K_##symbol,
 enum {
@@ -106,6 +108,7 @@ enum {
     KEYWORD(chmod,       COMMAND, 2, do_chmod)
     KEYWORD(log,         COMMAND, 1, do_log)
     KEYWORD(loglevel,    COMMAND, 1, do_loglevel)
+    KEYWORD(mknod,       COMMAND, 4, do_mknod)
     KEYWORD(load_persist_props,    COMMAND, 0, do_load_persist_props)
     KEYWORD(load_all_props,        COMMAND, 0, do_load_all_props)
     KEYWORD(ioprio,      OPTION,  0, 0)
